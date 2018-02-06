@@ -1,38 +1,9 @@
 import requests
 import datetime
 import random
-import MySQLdb
 import telegram
 
-token=""
-
-class dbConn:
-
-    ### Database settings ###
-    dsn = ("localhost", "botuser" , "b0tus3r." , "akelarre")
-
-    def __init__(self):
-        self.conn = MySQLdb.connect(*self.dsn)
-        self.cur = self.conn.cursor()        
-    
-    def cierre(self):
-        db.close()
-        
-    def __enter__(self):
-        return self
-        
-    def insertar(self):
-    
-        sql = """INSERT INTO eventos (reino, descripcion) VALUES ('Castilla','Tres bandidos aparecen en medio del camino')"""
-         
-        try:
-        
-            self.cur.execute(sql)
-            self.conn.commit()
-        except:
-            print ("Error en la insercion")
-            self.conn.rollback()
-         
+token=""   
 
 class BotHandler:
 
