@@ -42,8 +42,7 @@ class BotHandler:
         
 
 dice_bot = BotHandler(token)
-dados = ['3','4','6','8','10','12','20','100']
-
+dados = ['2','3','4','6','8','10','12','20','100']
 
 def dados(dad,num):
     if num > 0: 
@@ -56,8 +55,6 @@ def dados(dad,num):
 def comprueba(dad):
     if dad in dados:
         return True
-
-dados = ['2','3','4','6','8','10','12','20','100']
 
 def fdados(dad,num,suma):
     print ("Suma vale" + str(suma))
